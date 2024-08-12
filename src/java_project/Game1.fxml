@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" fx:id="bg" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFDD0;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.Game1Controller">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <Label id="game1Title" layoutX="70.0" prefHeight="72.0" prefWidth="460.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Number Guessing Game" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <TextArea id="instruction1" editable="false" layoutX="62.0" layoutY="72.0" prefHeight="129.0" prefWidth="474.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Instructions :&#10;1. Set range of numbers (e.g. 0 to 100 , 50 to 350 , etc.)&#10;2. Fix any one number (from the range) in your mind. &#10;3. Guessed number will be asked to you.&#10;4. You have to tell if your number is less than or greater than or equal to that number &#10;    by clicking on '&lt;' or '&gt;' or'=' button.&#10;5. By using binary search algorithm, program will guess your number in few steps :)" />
+      <Button id="set_btn" fx:id="set_btn" defaultButton="true" layoutX="463.0" layoutY="205.0" mnemonicParsing="false" onAction="#setRange" style="-fx-background-color: violet;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Set range">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Label id="range_from" layoutX="63.0" layoutY="204.0" prefHeight="26.0" prefWidth="104.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Select range from :" />
+      <Label id="number_display" fx:id="number_display" layoutX="63.0" layoutY="240.0" prefHeight="63.0" prefWidth="474.0" style="-fx-alignment: center;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="  " textAlignment="CENTER">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button id="less_btn" fx:id="less_btn" disable="true" layoutX="129.0" layoutY="312.0" mnemonicParsing="false" onAction="#lessThan" prefHeight="54.0" prefWidth="76.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="equal_btn" fx:id="equal_btn" disable="true" layoutX="261.0" layoutY="312.0" mnemonicParsing="false" onAction="#equalTo" prefHeight="75.0" prefWidth="76.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="=" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="greater_btn" fx:id="greater_btn" disable="true" layoutX="387.0" layoutY="312.0" mnemonicParsing="false" onAction="#greaterThan" prefHeight="75.0" prefWidth="76.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label id="range_to" layoutX="285.0" layoutY="209.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="to" />
+      <TextField id="from_range" fx:id="from_range" layoutX="167.0" layoutY="205.0" prefHeight="26.0" prefWidth="104.0" styleClass="mainFxmlClass" />
+      <TextField id="to_range" fx:id="to_range" layoutX="313.0" layoutY="205.0" prefHeight="26.0" prefWidth="104.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" />
+      <Button id="home_btn" fx:id="home_btn" layoutX="5.0" layoutY="4.0" mnemonicParsing="false" onAction="#onHome" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: orange; -fx-background-radius: 50;" styleClass="mainFxmlClass" stylesheets="@fxml.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+      <Button id="reset_btn" fx:id="reset_btn" layoutX="566.0" layoutY="2.0" mnemonicParsing="false" onAction="#onReset" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: orange; -fx-background-radius: 50;" styleClass="mainFxmlClass" stylesheets="@fxml.css" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

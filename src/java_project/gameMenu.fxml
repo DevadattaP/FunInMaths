@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFDD0;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.GameMenuController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <RadioButton id="guess_no" fx:id="guess_no" layoutX="109.0" layoutY="93.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Number guessing" textFill="#ff009e">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="menu" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="birthday" fx:id="birthday" layoutX="109.0" layoutY="139.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Finding birthday" textFill="#ff009e" toggleGroup="$menu">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </RadioButton>
+      <RadioButton id="mob_no" fx:id="mob_no" layoutX="109.0" layoutY="182.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Finding mobile number" textFill="#ff009e" toggleGroup="$menu">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </RadioButton>
+      <RadioButton id="erased_no" fx:id="erased_no" layoutX="109.0" layoutY="226.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Finding erased number" textFill="#ff009e" toggleGroup="$menu">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </RadioButton>
+      <RadioButton id="century" fx:id="century" layoutX="109.0" layoutY="272.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Century" textFill="#ff009e" toggleGroup="$menu">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="185.0" layoutY="14.0" text="Game Menu" textFill="#ff8c00">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button id="play_btn" layoutX="258.0" layoutY="327.0" mnemonicParsing="false" onAction="#playGame" prefHeight="51.0" prefWidth="82.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Play" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

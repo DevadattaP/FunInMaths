@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFDD0;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_project.Game5Controller">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="210.0" layoutY="14.0" text="Century First" textFill="#ff007a">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="30.0" layoutY="68.0" prefHeight="150.0" prefWidth="540.0" text="This is very interesting game&#10;You will be playing against computer&#10;Show off your talent&#10;Here are the rules for this game...&#10;Computer will start from zero&#10;Alternatively you and computer will enter any one number from 1 to 10 to add it in previous result&#10;The one who reaches '100' first, will be the winner&#10;All the best :)" />
+      <Button id="start_btn" fx:id="start_btn" layoutX="269.0" layoutY="218.0" mnemonicParsing="false" onAction="#onStart" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Start" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="33.0" layoutY="269.0" prefHeight="26.0" prefWidth="80.0" text="Computer:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label id="computer_lbl" fx:id="computer_lbl" layoutX="280.0" layoutY="252.0" prefHeight="66.0" prefWidth="287.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Ready ?" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="42.0" layoutY="344.0" prefHeight="26.0" prefWidth="62.0" text="You :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label id="user_lbl" fx:id="user_lbl" layoutX="276.0" layoutY="325.0" prefHeight="66.0" prefWidth="287.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField id="computer_entry" fx:id="computer_entry" disable="true" editable="false" layoutX="110.0" layoutY="266.0" prefHeight="26.0" prefWidth="55.0" styleClass="mainFxmlClass" stylesheets="@fxml.css">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <TextField id="user_entry" fx:id="user_entry" disable="true" layoutX="110.0" layoutY="342.0" prefHeight="31.0" prefWidth="55.0" styleClass="mainFxmlClass" stylesheets="@fxml.css" />
+      <Button id="enter_user" fx:id="enter_user" disable="true" layoutX="186.0" layoutY="342.0" mnemonicParsing="false" onAction="#onEnter" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: blue;" styleClass="mainFxmlClass" stylesheets="@fxml.css" text="Enter" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="reset_btn" fx:id="reset_btn" layoutX="565.0" layoutY="2.0" mnemonicParsing="false" onAction="#onReset" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: orange; -fx-background-radius: 50;" styleClass="mainFxmlClass" stylesheets="@fxml.css" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button id="home_btn" fx:id="home_btn" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#onHome" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: orange; -fx-background-radius: 50;" styleClass="mainFxmlClass" stylesheets="@fxml.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
